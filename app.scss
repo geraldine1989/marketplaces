@@ -1,0 +1,129 @@
+:root {
+    --color-default: #ffd840;
+    --color-dark: #ffc300;
+    --color-marketplace: #ed8052;
+    --color-crowdfunding: #47abed;
+}
+
+body {
+    background-color: #f0f3f7;
+    margin: 0;
+}
+
+html {
+    font-size: 10px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#app {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    font-family: sans-serif;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.boxes {
+    padding: 2rem 0;
+    width: 90%;
+}
+
+.box {
+    background-color: #ffffff;
+    margin-bottom: 1rem;
+
+    &__header,
+    &__content {
+        align-items: center;
+        display: flex;
+        width: 100%;
+    }
+
+    &__header {
+        border-bottom: 1px solid #f0f3f7;
+        padding: 1rem 1.5rem;
+        width: auto;
+
+        &__title {
+            color: #585858;
+            font-family: sans-serif;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+    }
+
+    &__content {
+        flex-direction: column;
+        padding: 0 1.5rem 1rem;
+        width: auto;
+
+        &__link {
+            align-items: center;
+            display: flex;
+            text-transform: capitalize;
+            width: 100%;
+
+            &--marketplace a {
+                color: var(--color-marketplace);
+            }
+
+            &--crowdfunding a {
+                color: var(--color-crowdfunding);
+            }
+        }
+
+        &__link a {
+            font-size: 1.3rem;
+            font-weight: bold;
+            text-decoration: none;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        p {
+            color: #585858;
+            font-weight: bold;
+            line-height: 1.5rem;
+            margin: 0;
+            padding: 1.5rem 0;
+            width: 100%;
+        }
+    }
+
+    .icon {
+        padding-right: 0.8rem;
+        width: 1.5rem;
+    }
+}
+
+button {
+    background-color: #ed8052;
+    border: 1px solid #ed8052;
+    border-radius: 5px;
+    color: #ffffff;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    padding: 1rem 3rem;
+    text-transform: uppercase;
+    outline: none;
+
+    &:hover {
+        background-color: #ffffff;
+        color: #ed8052;
+        cursor: pointer;
+    }
+}
+
+@media all and (min-width: 1024px) {
+    .boxes {
+        width: 33%;
+    }
+}
